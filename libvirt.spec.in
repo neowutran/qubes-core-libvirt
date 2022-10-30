@@ -1291,7 +1291,7 @@ cd %{_vpath_builddir}
            %{?arg_numad} \
            --with-capng \
            %{?arg_fuse} \
-           --without-netcf \
+           --without-netcf --without-docs \
            --with-selinux \
            %{?arg_selinux_mount} \
            --without-apparmor \
