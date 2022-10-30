@@ -443,7 +443,7 @@ BuildRequires: fuse-devel >= 2.8.6
 BuildRequires: libssh2-devel >= 1.3.0
 %endif
 
-BuildRequires: netcf-devel >= 0.2.2
+#BuildRequires: netcf-devel >= 0.2.2
 %if %{with_esx}
 BuildRequires: libcurl-devel
 %endif
@@ -496,12 +496,12 @@ Libvirt is a C toolkit to interact with the virtualization capabilities
 of recent versions of Linux (and other OSes). The main package includes
 the libvirtd server exporting the virtualization support.
 
-%package docs
-Summary: API reference and website documentation
+#%package docs
+#Summary: API reference and website documentation
 
-%description docs
-Includes the API reference for the libvirt C library, and a complete
-copy of the libvirt.org website documentation.
+#%description docs
+#Includes the API reference for the libvirt C library, and a complete
+#copy of the libvirt.org website documentation.
 
 %package daemon
 Summary: Server side daemon and supporting files for libvirt library
@@ -614,7 +614,7 @@ capabilities.
 Summary: Interface driver plugin for the libvirtd daemon
 Requires: libvirt-daemon = %{epoch}:%{version}-%{release}
 Requires: libvirt-libs = %{epoch}:%{version}-%{release}
-Requires: netcf-libs >= 0.2.2
+#Requires: netcf-libs >= 0.2.2
 
 %description daemon-driver-interface
 The interface driver plugin for the libvirtd daemon, providing
@@ -1291,7 +1291,7 @@ cd %{_vpath_builddir}
            %{?arg_numad} \
            --with-capng \
            %{?arg_fuse} \
-           --with-netcf \
+           --without-netcf \
            --with-selinux \
            %{?arg_selinux_mount} \
            --without-apparmor \
@@ -1407,7 +1407,7 @@ rm -f $RPM_BUILD_ROOT%{_datadir}/augeas/lenses/tests/test_libvirtd_libxl.aug
 %endif
 
 # Copied into libvirt-docs subpackage eventually
-mv $RPM_BUILD_ROOT%{_datadir}/doc/libvirt libvirt-docs
+#mv $RPM_BUILD_ROOT%{_datadir}/doc/libvirt libvirt-docs
 
 %ifarch %{power64} s390x x86_64 ia64 alpha sparc64
 mv $RPM_BUILD_ROOT%{_datadir}/systemtap/tapset/libvirt_probes.stp \
