@@ -1659,9 +1659,9 @@ exit 0
 
 %files
 
-%files docs
-%doc AUTHORS ChangeLog NEWS.rst README README.rst
-%doc %{_vpath_builddir}/libvirt-docs/*
+#%files docs
+#%doc AUTHORS ChangeLog NEWS.rst README README.rst
+#%doc %{_vpath_builddir}/libvirt-docs/*
 
 %files daemon
 
